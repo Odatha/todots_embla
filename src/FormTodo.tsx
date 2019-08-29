@@ -1,17 +1,13 @@
 import React from "react";
 
-const FormTodo =(props) => {
- 
-    return (
-      <form onSubmit={props.onSubmit}>
-       
+const FormTodo = props => {
+  return (
+    <form onSubmit={props.onSubmit}>
+      {props.children}
 
-        {props.children}
-
-        <button type="submit">{props.label}</button>
-      </form>
-    );
-  }
-
+      <button type="submit">{props.label}</button>
+    </form>
+  );
+};
 
 export default FormTodo;
